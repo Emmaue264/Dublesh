@@ -3,56 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisan Catalog Hierarchy</title>
+    <!-- CORRECTION: title changed from "Artisan Catalog Hierarchy" to match the Jellyweb brand. -->
+    <title>Jellyweb | Other Pages</title>
 </head>
-<body>
 
-    <h2>Our Handmade Collections</h2>
-    
-    <!-- Outer List: Main Craft Categories -->
+<!-- CORRECTION: this page had no navigation and no background. It now matches index.html. -->
+<!-- OVERLAY: a 75% white layer sits on top of images/house2.jpeg so text stays readable.
+         Change 0.75 to a lower number to show more of the photo.
+         'scroll' replaces 'fixed' because fixed backgrounds are choppy on phones. -->
+<body style="background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('images/house2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;">
+
+    <!-- NAVIGATION (identical to index.html) -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Test_7.html">Services</a>
+        <a href="Test_8.html">Other Pages</a>
+    </nav>
+
+    <h2>OTHER PAGES</h2>
+    <hr>
+
+    <h2 style="background-color: darkolivegreen; color: white;">Our Artisan Categories</h2>
+
+    <!-- Outer list: main trade groups.
+         CORRECTION: the old content described ceramics/woodwork products, which do not
+         match an artisan service platform. Rewritten as trades, keeping the nested-list idea. -->
     <ol>
         <li>
-            <strong>Hand-Thrown Ceramics</strong>
-            <!-- Inner List Level 1: Sub-categories -->
+            <strong>Building and Construction</strong>
+            <!-- Inner list level 1: trades -->
             <ul>
-                <li>Tableware
-                    <!-- Inner List Level 2: Specific items & batch details -->
+                <li>Masonry
+                    <!-- Inner list level 2: specific jobs -->
                     <ul>
-                        <li>Ribbed Mugs (Oatmeal glaze)</li>
-                        <li>Shallow Pasta Bowls (Set of 4)</li>
+                        <li>Blockwork and plastering</li>
+                        <li>Tiling and floors</li>
                     </ul>
                 </li>
-                <li>Home Decor
+                <li>Carpentry
                     <ul>
-                        <li>Tapered Bud Vases</li>
-                        <li>Hand-Carved Incense Holders</li>
+                        <li>Doors and wardrobes</li>
+                        <li>Roofing frames</li>
                     </ul>
                 </li>
             </ul>
         </li>
 
         <li>
-            <strong>Sustainably Sourced Woodwork</strong>
+            <strong>Installation and Repairs</strong>
             <ul>
-                <li>Kitchenware
+                <li>Electrical
                     <ul>
-                        <li>Walnut Live-Edge Cutting Boards</li>
-                        <li>Hand-Carved Serving Spoons</li>
+                        <li>Wiring and lighting</li>
+                        <li>Appliance installation</li>
+                    </ul>
+                </li>
+                <li>Plumbing
+                    <ul>
+                        <li>Pipe fitting and leaks</li>
+                        <li>Water tanks and bathrooms</li>
                     </ul>
                 </li>
             </ul>
         </li>
 
         <li>
-            <strong>The Crafting Process (Our Guarantee)</strong>
-            <!-- Ordered list used nested inside an unordered list item -->
+            <strong>Our Guarantee</strong>
+            <!-- Ordered list nested inside a list item -->
             <ol>
-                <li>Ethical raw material harvesting</li>
-                <li>3-week patient kiln drying or curing</li>
-                <li>Individual hand-stamping with the studio emblem</li>
+                <li>Skilled and verified artisans</li>
+                <li>Fair and affordable pricing</li>
+                <li>Quality work completed on time</li>
             </ol>
         </li>
     </ol>
+
+    <!-- NEW: <table> site map of every page. -->
+    <h3 style="background-color: darkolivegreen; color: white;">Site Pages</h3>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <caption>Jellyweb Pages</caption>
+        <thead>
+            <tr>
+                <th>Page</th>
+                <th>What you will find</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><a href="index.html">Home</a></td><td>Our story, artisan contacts, request form</td></tr>
+            <tr><td><a href="Test_7.html">Services</a></td><td>Service table and booking form</td></tr>
+            <tr><td><a href="Test_8.html">Other Pages</a></td><td>Categories, site pages, feedback form</td></tr>
+        </tbody>
+    </table>
+
+    <!-- NEW: <form> for customer feedback. -->
+    <h3 style="background-color: darkolivegreen; color: white;">Send Us Feedback</h3>
+    <form action="#" method="post">
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="rating">Rating:</label><br>
+            <select id="rating" name="rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Fair</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very poor</option>
+            </select>
+        </p>
+        <p>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+        </p>
+        <button type="submit">Send feedback</button>
+    </form>
+    <br>
+
+    <a href="index.html"><button>Back to Home</button></a>
 
 </body>
 </html>

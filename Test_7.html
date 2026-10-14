@@ -3,67 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth & Fire | Handcrafted Ceramics</title>
-    <style>
-        body { font-family: 'Georgia', serif; background-color: #faf7f2; color: #332d27; margin: 0; }
-        header { padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e6dfd5; }
-        .hero { text-align: center; padding: 80px 20px; background-color: #f0eae1; }
-        .btn { background-color: #8c6d53; color: white; padding: 12px 24px; text-decoration: none; display: inline-block; margin-top: 20px; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; }
-        .product-card { background: white; padding: 15px; text-align: center; border: 1px solid #e6dfd5; }
-        .story-section { padding: 60px 40px; text-align: center; max-width: 800px; margin: 0 auto; }
-        footer { background-color: #332d27; color: #faf7f2; text-align: center; padding: 30px; margin-top: 40px; }
-    </style>
+    <!-- CORRECTION: the old title ("Earth & Fire | Handcrafted Ceramics") belonged to a
+         different website. Now matches the Jellyweb brand from index.html. -->
+    <title>Jellyweb | Services</title>
 </head>
-<body>
 
-    <!-- Navigation Header -->
-    <header>
-        <div class="logo"><strong>EARTH & FIRE</strong></div>
-        <nav>
-            <a href="#story" style="margin-right: 15px; color: inherit;">Our Story</a>
-            <a href="#shop" style="margin-right: 15px; color: inherit;">The Collection</a>
-            <a href="#process" style="color: inherit;">The Process</a>
-        </nav>
-    </header>
+<!-- CORRECTION: the old page used its own <style> block, fonts and colours. It now uses
+     the same plain inline-styled structure and background image as index.html. -->
+<!-- OVERLAY: a 75% white layer sits on top of images/house2.jpeg so text stays readable.
+         Change 0.75 to a lower number to show more of the photo.
+         'scroll' replaces 'fixed' because fixed backgrounds are choppy on phones. -->
+<body style="background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('images/house2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;">
 
-    <!-- Hero Announcement -->
-    <section class="hero">
-        <h1>Molded by Hand, Perfected by Imperfection</h1>
-        <p>Functional, small-batch stoneware designed for everyday living.</p>
-        <a href="#shop" class="btn">Browse Collection</a>
-    </section>
+    <!-- NAVIGATION (identical to index.html) -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Test_7.html">Services</a>
+        <a href="Test_8.html">Other Pages</a>
+    </nav>
 
-    <!-- The Artisan's Story -->
-    <section id="story" class="story-section">
-        <h2>Behind the Wheel</h2>
-        <p>Every piece is individually thrown, glazed, and fired in our backyard studio in Vermont. We embrace slight variations in shape and hue as signatures of the human hand.</p>
-    </section>
+    <h2>OUR SERVICES</h2>
+    <p>Find the right skilled artisan for your home, office, or shop. Check the table below to see what each trade covers.</p>
+    <hr>
 
-    <!-- Product Showcase Gallery -->
-    <h2 style="text-align: center;" id="shop">Seasonal Batch</h2>
-    <section class="gallery">
-        <div class="product-card">
-            <div style="height: 200px; background-color: #dfd5c6; margin-bottom: 10px;"><!-- Image Placeholder --></div>
-            <h3>Ribbed Stoneware Mug</h3>
-            <p>Earthy oatmeal glaze finish.</p>
-        </div>
-        <div class="product-card">
-            <div style="height: 200px; background-color: #dfd5c6; margin-bottom: 10px;"><!-- Image Placeholder --></div>
-            <h3>Tapered Flower Vase</h3>
-            <p>Raw clay base with matte white dip.</p>
-        </div>
-        <div class="product-card">
-            <div style="height: 200px; background-color: #dfd5c6; margin-bottom: 10px;"><!-- Image Placeholder --></div>
-            <h3>Shallow Serving Bowl</h3>
-            <p>Hand-carved detailing around the rim.</p>
-        </div>
-    </section>
+    <h2 style="background-color: darkolivegreen; color: white;">Services We Offer</h2>
 
-    <!-- Footer / Studio Details -->
-    <footer>
-        <p>© 2026 Earth & Fire Studio. Made slowly, intentionally.</p>
-    </footer>
+    <!-- NEW: <table> listing each service. -->
+    <table border="1" cellpadding="6" cellspacing="0">
+        <caption>Artisan Services</caption>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>What it covers</th>
+                <th>Artisan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Carpentry</td><td>Doors, wardrobes, roofing frames, furniture</td><td>Kofi Mensah</td></tr>
+            <tr><td>Electrical</td><td>Wiring, lighting, repairs, installations</td><td>Daniel Asare</td></tr>
+            <tr><td>Plumbing</td><td>Pipe fitting, leaks, water tanks, bathrooms</td><td>Kwame Boateng</td></tr>
+            <tr><td>Welding</td><td>Gates, burglar bars, metal frames</td><td>Michael Osei</td></tr>
+            <tr><td>Painting</td><td>Interior and exterior painting</td><td>Samuel Addo</td></tr>
+            <tr><td>Masonry</td><td>Blockwork, plastering, tiling, floors</td><td>Emmanuel Tetteh</td></tr>
+        </tbody>
+    </table>
+
+    <!-- NEW: <form> to book a service. -->
+    <h3 style="background-color: darkolivegreen; color: white;">Book a Service</h3>
+    <form action="#" method="post">
+        <p>
+            <label for="name">Full name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="service">Service:</label><br>
+            <select id="service" name="service">
+                <option value="carpentry">Carpentry</option>
+                <option value="electrical">Electrical</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="welding">Welding</option>
+                <option value="painting">Painting</option>
+                <option value="masonry">Masonry</option>
+            </select>
+        </p>
+        <p>
+            <label for="date">Preferred date:</label><br>
+            <input type="date" id="date" name="date">
+        </p>
+        <p>
+            Location type:<br>
+            <input type="radio" id="home" name="location" value="home" checked>
+            <label for="home">Home</label>
+            <input type="radio" id="office" name="location" value="office">
+            <label for="office">Office</label>
+            <input type="radio" id="shop" name="location" value="shop">
+            <label for="shop">Shop</label>
+        </p>
+        <button type="submit">Book now</button>
+    </form>
+    <br>
+
+    <!-- Same buttons style as index.html -->
+    <a href="index.html"><button>Back to Home</button></a>
+    <a href="Test_8.html"><button>Explore our other pages here</button></a>
 
 </body>
 </html>

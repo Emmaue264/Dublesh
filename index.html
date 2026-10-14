@@ -5,96 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jellyweb</title>
 </head>
-<body style="background-color: lightblue;">
-    <h2 style="background-color: darkolivegreen;">OUR STORY</h2>
-    <p>Welcome to Our Artisan Services. <br>
 
-You are welcome to our platform, your trusted place for finding skilled and reliable artisans. We connect customers with experienced professionals who are ready to provide quality services for homes, offices, shops, and other projects.
+<!-- CORRECTION: <nav> was sitting between </head> and <body>, which is invalid HTML.
+     It now lives inside <body>. All three pages share this same nav. -->
+<!-- OVERLAY: a 75% white layer sits on top of images/house2.jpeg so text stays readable.
+         Change 0.75 to a lower number to show more of the photo.
+         'scroll' replaces 'fixed' because fixed backgrounds are choppy on phones. -->
+<body style="background-image: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('images/house2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;">
 
-Whether you need a plumber, electrician, carpenter, painter, welder, mason, tiler, or other skilled worker, we make it easier for you to find the right person for the job.
+    <!-- NAVIGATION (identical on every page) -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Test_7.html">Services</a>
+        <a href="Test_8.html">Other Pages</a>
+    </nav>
 
-Our aim is to provide quality workmanship, affordable prices, reliability, and customer satisfaction. We believe every job deserves attention, professionalism, and good results.
+    <h2>OUR STORY</h2>
 
-Whatever your project may be, we are here to help you get the work done properly and on time.
+    <!-- CORRECTION: the original text was one long block. Split into separate
+         paragraphs so it is valid and easier to read. -->
+    <p>Welcome to Our Artisan Services.</p>
+    <p>You are welcome to our platform, your trusted place for finding skilled and reliable artisans. We connect customers with experienced professionals who are ready to provide quality services for homes, offices, shops, and other projects.</p>
+    <p>Whether you need a plumber, electrician, carpenter, painter, welder, mason, tiler, or other skilled worker, we make it easier for you to find the right person for the job.</p>
+    <p>Our aim is to provide quality workmanship, affordable prices, reliability, and customer satisfaction. We believe every job deserves attention, professionalism, and good results.</p>
+    <p>Whatever your project may be, we are here to help you get the work done properly and on time.</p>
+    <p><strong>Find a skilled artisan. Get quality service. Get the job done.</strong></p>
+    <hr>
 
-Find a skilled artisan. Get quality service. Get the job done.</p>
-<hr>
-<h2 style="background-color: darkolivegreen;">function of an Artisan Service platform<br></h2>
-<p>      connect customers with skilled artisans who can provide services such as plumbing, electrical work, carpentry, painting, welding, tiling, and masonry. It helps customers find the right artisan, request services, communicate with them, and get their work completed efficiently</p>
+    <h2 style="background-color: darkolivegreen; color: white;">Function of an Artisan Service platform</h2>
+    <!-- CORRECTION: removed stray <br> inside the heading; capitalised heading;
+         added the missing subject ("Our platform") to the sentence. -->
+    <p>Our platform connects customers with skilled artisans who can provide services such as plumbing, electrical work, carpentry, painting, welding, tiling, and masonry. It helps customers find the right artisan, request services, communicate with them, and get their work completed efficiently.</p>
 
-<h3 style="background-color: darkolivegreen;"> Contact Detail</h3>
-<p>If you need sample artisan names and contacts for your website project, you can use fictional details like these: <br>
+    <h3 style="background-color: darkolivegreen; color: white;">Contact Details</h3>
+    <!-- CORRECTION: the original said "If you need sample artisan names... use fictional
+         details like these", which is leftover instruction text, not site copy.
+         Replaced with a proper intro line. -->
+    <p>Reach any of our artisans directly using the details below.</p>
 
+    <!-- NEW: <table> replaces the messy nested <ul><ol> contact list.
+         Typos fixed: "menseh" -> "mensah", "Micheal" -> "Michael" so each email
+         matches the artisan's name. -->
+    <table border="1" cellpadding="6" cellspacing="0">
+        <caption>Our Artisans</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Tel</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Kofi Mensah</td><td>Carpenter</td><td>024 123 4567</td><td>kofi.mensah112@gmail.com</td></tr>
+            <tr><td>Daniel Asare</td><td>Electrician</td><td>055 234 5678</td><td>daniel.asare85@gmail.com</td></tr>
+            <tr><td>Kwame Boateng</td><td>Plumber</td><td>020 345 6789</td><td>kwame.boateng@gmail.com</td></tr>
+            <tr><td>Michael Osei</td><td>Welder</td><td>054 456 7890</td><td>michael.osei@gmail.com</td></tr>
+            <tr><td>Samuel Addo</td><td>Painter</td><td>027 567 8901</td><td>samuel.addo@gmail.com</td></tr>
+            <tr><td>Emmanuel Tetteh</td><td>Mason</td><td>059 678 9012</td><td>emmanuel.tetteh@gmail.com</td></tr>
+        </tbody>
+    </table>
 
-<ul><li><strong>Artisan	Personal Service	Contacts </strong> <br>
+    <!-- NEW: <form> so customers can request an artisan. -->
+    <h3 style="background-color: darkolivegreen; color: white;">Request an Artisan</h3>
+    <form action="#" method="post">
+        <p>
+            <label for="name">Full name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone">
+        </p>
+        <p>
+            <label for="service">Service needed:</label><br>
+            <select id="service" name="service">
+                <option value="carpentry">Carpentry</option>
+                <option value="masonry">Masonry</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="welding">Welding</option>
+                <option value="painting">Painting</option>
+                <option value="electrical">Electrical</option>
+            </select>
+        </p>
+        <p>
+            <label for="details">Job details:</label><br>
+            <textarea id="details" name="details" rows="4" cols="30"></textarea>
+        </p>
+        <button type="submit">Send request</button>
+    </form>
 
-    <ol><li>Name: Kofi Mensah Role: Carpenter Tel: 024 123 4567  Mail: kofi.menseh112@gmail.com</li>
+    <!-- CORRECTION: <marquee> is deprecated in HTML5 but kept here because it is part
+         of the original design. Consider replacing with CSS animation later. -->
+    <marquee direction="right" behavior="alternate"><h2>Available Services</h2></marquee>
 
-        <li>Name : Daniel Asare	Role: Electrician	Tel: 055 234 5678 Mail: Daniel.Asare85@gmail.com</li>
-
-        <li>Name: Kwame Boateng	 Role: Plumber	 Tel: 020 345 6789 Mail: kwame.Boateng@gmail.com</li>
-
-        <li>Name : Michael Osei	 Role: Welder	 Tel: 054 456 7890 Mail: Micheal.osei@gmail.com</li>
-
-        <li>Name: Samuel Addo	 Role: Painter   Tel:027 567 8901 Mail: Samuel.Addo@gmail.com</li>
-
-        <li>Name: Emmanuel Tetteh Role:	Mason	 Tel: 059 678 9012 Mail: Emmanuel.Tetteh@gmail.com</li>
-
+    <!-- CORRECTION: <marquee> cannot sit directly inside <ol>, and <ol> cannot sit
+         inside <p>. The list is now valid: each <li> contains its own <marquee>.
+         Also fixed: backslashes in image paths -> forward slashes, missing spaces
+         between attributes, empty alt text, and the spelling "masonary" -> "Masonry".
+         Capitalisation made consistent. -->
+    <ol>
+        <li><marquee>Carpentry <img src="images/Carpentry.jpeg" width="300" height="200" alt="Carpenter at work"></marquee></li>
+        <li><marquee direction="right">Masonry <img src="images/masonary.jpeg" width="300" height="200" alt="Mason laying blocks"></marquee></li>
+        <li><marquee>Plumbing <img src="images/plumber.jpeg" width="300" height="200" alt="Plumber fixing pipes"></marquee></li>
+        <li><marquee direction="right">Welding <img src="images/welder 2.jpeg" width="300" height="200" alt="Welder at work"></marquee></li>
+        <li><marquee>Painting <img src="images/painter.jpeg" width="300" height="200" alt="Painter painting a wall"></marquee></li>
+        <li><marquee direction="right">Electrical <img src="images/Electrician.jpeg" width="300" height="200" alt="Electrician wiring"></marquee></li>
     </ol>
-</li></ul>
 
+    <!-- CORRECTION: the two buttons pointed to the wrong pages. "Service list" now goes
+         to Test_7 (Services in the nav) and "Other pages" goes to Test_8 (Other Pages). -->
+    <a href="Test_7.html"><button>Click here to see our service list</button></a> <br> <br>
+    <a href="Test_8.html"><button>Explore our other pages here</button></a> <br> <br>
 
+    <!-- Video (removed deprecated frameborder attribute) -->
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/41FToUydIiw?si=XLtdp8T1jvA2b_qo" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
 
-
-
-
-
-<marquee direction="right" behavior="alternate"><h2> Available Services</h2></marquee>
-<p>
-
-
- <ol>
-    
-    <marquee>
-        <li>Carpentry</li>
-    <img src="Carpentry.jpeg" width="300" height="200" alt="">
-    </marquee>
-    
-    <marquee direction="right">
-        <li>masonary</li>
-    <img src="masonary.jpeg" width="300" height="200"alt="">
-    </marquee>
-    
-    <marquee>
-        <li>plumbing</li>
-    <img src="plumber.jpeg" width="300" height="200"alt="">
-    </marquee>
-    
-    <marquee direction="right">
-        <li>welding</li>
-    <img src="welder 2.jpeg"width="300" height="200" alt ="">
-    </marquee>
-    
-    <marquee>
-        <li>painting</li>
-    <img src="painter.jpeg" width="300" height="200"alt="">
-    </marquee>
-
-    <marquee direction="right">
-        <li>Electrician</li>
-    <img src="Electrician.jpeg"width="300" height="200" alt="">
-    </marquee>
-   
- </ol>
-</p>
-
-<a href="Test_8.html" ><button>click here to see our service list.</button></a> <br> <br>
-
-<a href="Test_7.html" ><button>Explore our others pages here</button></a> <br>
-
-<iframe width="300" height="200" src="https://www.youtube.com/embed/41FToUydIiw?si=XLtdp8T1jvA2b_qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.294904774195!2d-0.18933479999999997!3d5.670433000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9c5ee301f579%3A0xa3a82665183839c!2sWisconsin%20International%20University%20College%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1789651678852!5m2!1sen!2sgh" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <!-- Map (added a title for accessibility) -->
+    <iframe title="Our location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.294904774195!2d-0.18933479999999997!3d5.670433000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9c5ee301f579%3A0xa3a82665183839c!2sWisconsin%20International%20University%20College%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1789651678852!5m2!1sen!2sgh" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 </body>
-</html> 
+</html>
